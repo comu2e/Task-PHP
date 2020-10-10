@@ -13,12 +13,14 @@
             <th>
             <td>{{$task -> comment}}</td>
             </th>
-            <th>
-            <td>{{$task -> status}}</td>
-            </th>
+
 {{--            作業中と表示　$tasksからステータスを撮ってくる。--}}
             <th><button>{{$task->status}}</button></th>
-            <th><button>削除</button></th>
+            <form action="/task/del" method="post">
+                @csrf
+                <th><button type="submit" onclick = "DeleteController@remove" >削除</button></th>
+
+            </form>
         </table>
     @endforeach
 @endsection

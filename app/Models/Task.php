@@ -13,7 +13,10 @@ class Task extends Model
     public static $rules = array(
        'comment' => 'required'
     );
-   public function getData(){
+
+
+
+    public function getData(){
        return $this -> comment ;
    }
 }

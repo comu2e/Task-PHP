@@ -10,3 +10,17 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+.idea/codeStyles/codeStyleConfig.xml
+.idea/commandlinetools/Laravel_2020_10_10_14_29.xml
+.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd
+.idea/dataSources.local.xml
+.idea/dataSources.xml
+.idea/dataSources/146fe049-09eb-42a4-9461-e585042f392b.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/php.xml
+.idea/phpunit.xml
+.idea/vcs.xml
+.idea/web4.iml
+composer.lock
+composer.phar
+yarn.lock
