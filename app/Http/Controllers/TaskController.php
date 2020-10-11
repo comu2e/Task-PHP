@@ -30,6 +30,7 @@ class TaskController extends Controller
     {
         $tasks = Task::find($id);
         $tasks->delete();
+
         return redirect()->route('task.add');
     }
 }

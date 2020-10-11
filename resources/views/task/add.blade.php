@@ -4,11 +4,12 @@
 
 @section('content')
     {{--    データベースの値を$itemsとして受け取って、foreachで表示--}}
-    @foreach( $items as $task)
+    @foreach ( $items as $task)
 
         <table>
             <th>
-            <td>{{$task -> id}}</td>
+{{--            idを振り直す　$loop->iteration --}}
+            <td>{{$loop->iteration}}</td>
             </th>
             <th>
             <td>{{$task -> comment}}</td>
