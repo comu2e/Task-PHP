@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('task','\App\Http\Controllers\AddController@index');
+Route::get('index','\App\Http\Controllers\AddController@index');
 
-Route::get('task/add','\App\Http\Controllers\AddController@add');
-Route::post('task/add','\App\Http\Controllers\AddController@create');
+Route::get('index','\App\Http\Controllers\AddController@add');
+Route::post('index','\App\Http\Controllers\AddController@create');

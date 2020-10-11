@@ -7,14 +7,10 @@ use Illuminate\Http\Request;
 
 class AddController extends Controller
 {
-    public function index(){
-        $tasks = Task::all();
-        return view('task.add',['items'=>$tasks]);
-    }
 
     public function add(Request $request){
         $tasks = Task::all();
-        return view('task.add',['items'=>$tasks]);
+        return view('index',['items'=>$tasks]);
 
     }
     public function create(Request $request){
@@ -24,7 +20,7 @@ class AddController extends Controller
         unset($form['_token']);
         $task -> status = '作業中';
         $task -> fill($form)-> save();
-        return redirect('/task');
+        return redirect('/index');
     }
 
 }
