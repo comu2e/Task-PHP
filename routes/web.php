@@ -19,5 +19,6 @@ Route::get('/', function () {
 
 Route::get('task','\App\Http\Controllers\TaskController@index');
 
-Route::get('task/add','\App\Http\Controllers\TaskController@add');
+Route::get('task/add','\App\Http\Controllers\TaskController@add')->name('task.add');
 Route::post('task/add','\App\Http\Controllers\TaskController@create');
+Route::post('task/destroy{id?}','\App\Http\Controllers\TaskController@destroy')->name('task.destroy');
