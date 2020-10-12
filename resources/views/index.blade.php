@@ -9,9 +9,18 @@
         <table>
             <td>{{$task -> id}}</td>
             <td>{{$task -> comment}}</td>
-            <td>{{$task -> status}}</td>
             {{--            作業中と表示　$tasksからステータスを撮ってくる。--}}
-            <th><button>{{$task->status}}</button></th>
+
+{{--            statusボタンクリック時にeditアクションを実行する--}}
+            <form action="{{route('index.edit',[$task->id]) }}" method="post">
+                <th>
+                    @csrf
+                    <button type="submit">
+                        {{$task->status}}
+                    </button>
+                </th>
+            </form>
+
             <th><button>削除</button></th>
         </table>
     @endforeach

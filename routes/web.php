@@ -17,7 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('index','\App\Http\Controllers\AddController@index');
+Route::get('index','\App\Http\Controllers\AddController@index')->name('index');
 
 Route::get('index','\App\Http\Controllers\AddController@add');
 Route::post('index','\App\Http\Controllers\AddController@create');
+
+Route::get('index{id?}','\App\Http\Controllers\AddController@edit')->name('index.edit');
+Route::post('index{id?}','\App\Http\Controllers\AddController@update')->name('index.edit');
+
